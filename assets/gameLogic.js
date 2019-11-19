@@ -25,7 +25,7 @@ class Round {
         this.rounds --; 
 
         questionBox.text(question.question);
-        let tm = setTimeout(this.handleTimeOut, 5000);
+        let tm = setTimeout(() => this.handleTimeOut(), 5000);;
 
         for (let i = 0; i < question.answers.length; i++) {
             let answers = $(`<li class="answers"></li>`);
