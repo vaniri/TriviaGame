@@ -1,0 +1,81 @@
+body {
+  background-image: url("image/Screenshot-2017-04-22-20.47.15.png");
+  color: whitesmoke;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+}
+
+#start-game {
+  display: block;
+  margin: 3vw auto;
+  text-align: center;
+  background-color: black;
+  color: orangered;
+  padding: 1.5vw 2vw;
+  font-size: 2.5vw;
+  box-shadow: 0 8px 16px 0 #00FF88, 0 6px 20px 0 blue;
+  border: none;
+}
+
+#start-game:hover {
+  background-color: orangered;
+  color: whitesmoke;
+}
+
+#game-container {
+  background-color: #1B2C38F0; 
+  box-shadow: 0 8px 16px 0 #1e1e1e, 0 6px 20px 0 black, 0 6px 20px 0 #1B2C38;
+  color: whitesmoke;
+  margin: auto; 
+  margin-top: 8vw;
+  width: 73vw;
+  height: 40vw;
+}
+
+#question-box, #answers-box, #text, #timer-box {
+  text-align: center;
+  margin: 1vw;
+  font-size: 1.5vw;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0.5vw;
+  padding: 0.5vw;
+}
+
+li:hover {
+  background-color: #FF4500;
+}
+
+#text{
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 0 10vw;
+}
+
+#title{
+  margin-top: 2vw;
+  padding: 2vw;
+  color: #FF4500;
+  font-weight: 500;
+  font-size: 2vw;
+  text-align: center;
+ 
+}
+
+#question-box {
+  color: #00FF88;
+  font-size: 2vw;
+}
+
+#timer-box {
+  color: #4500ff;
+  font-size: 2vw;
+  margin: 2vw;
+}
