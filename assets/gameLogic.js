@@ -7,9 +7,11 @@ class Round {
             { question: `parseInt(null, 24)`, answers: ["23", "null", "null24", "Error"], correct: 0 },
             { question: `(!+[]+[]+![]).length`, answers: ["13", "0", "undefined", "9"], correct: 3 },
             { question: `9+”1”`, answers: ["91", "10", "Nun", "9"], correct: 0 },
-            { question: `true_true + true === 3`, answers: ["false", "Nun", "undefined", "true"], correct: 3 },
+            { question: `3 + true == 4`, answers: ["false", "Nun", "undefined", "true"], correct: 3 },
             { question: `[] + {}`, answers: ["[object Object]", "0", "false", "array"], correct: 0 },
             { question: `[1,2,3] == [1,2,3]`, answers: ["Null", "array", "false", "true"], correct: 2 },
+            { question: `!![]`, answers: ["[]", "false", "array", "false"], correct: 1},
+            { question: `true + false`, answers: ["1", "truefalse", "undefined", "false"], correct: 0},
             { question: `Array(16).join("wat" - 1) + " Batman!"`, answers: ["Batman!", "NaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNNNaNN Batman!", "NaNN", "undefined"], correct: 1, image: "" }
         ];
         this.answerResponses = ["Nice job!", "Well Done!", "You get it!", "That's right!", "You are really a ninja!"];
@@ -38,7 +40,7 @@ class Round {
 
         questionBox.text(question.question);
         countDown();
-        let tm = setTimeout(() => this.handleTimeOut(), 5000);
+        let tm = setTimeout(() => this.handleTimeOut(question), 5000);
 
         for (let i = 0; i < question.answers.length; i++) {
             let answers = $(`<li class="answers"></li>`);
@@ -61,8 +63,8 @@ class Round {
 
     }
 
-    handleTimeOut() {
-        $('#question-box').text(`Correct answer is: ${this.correct}`);
+    handleTimeOut(question) {
+        $('#question-box').text(`Correct answer is: ${question.answers[question.correct]}`);
         this.wrongAnswers++;
         clearInterval(intervalHandle);
         setTimeout(() => this.startGame(), 1000);
