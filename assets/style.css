@@ -2,7 +2,7 @@ body {
   background-image: url("image/Screenshot-2017-04-22-20.47.15.png");
   color: whitesmoke;
   background-repeat: no-repeat;
-  font-family: 'Karla', sans-serif;
+  font-family:  'Poppins', sans-serif;
 }
 
 #start-game {
@@ -13,7 +13,7 @@ body {
   color: orangered;
   padding: 1.5vw 2vw;
   font-size: 2.5vw;
-  box-shadow: 0 8px 16px 0 #00FF88, 0 6px 20px 0 blue;
+  box-shadow: 0 8px 16px 0 #00ff88, 0 6px 20px 0 blue;
   border: none;
 }
 
@@ -23,19 +23,61 @@ body {
 }
 
 #game-container {
-  background-color: #1B2C38F0; 
-  box-shadow: 0 8px 16px 0 #1e1e1e, 0 6px 20px 0 black, 0 6px 20px 0 #1B2C38;
+  background-color: #1b2c38f0;
+  box-shadow: 0 8px 16px 0 #1e1e1e, 0 6px 20px 0 black, 0 6px 20px 0 #1b2c38;
   color: whitesmoke;
-  margin: auto; 
+  margin: auto;
   margin-top: 8vw;
   width: 85vw;
   height: 45vw;
 }
 
-#question-box, #answers-box, #text, #timer-box {
+#title {
+  margin-top: 2vw;
+  padding: 2vw;
+  color: #ff4500;
+  font-weight: 500;
+  font-size: 2.2vw;
+  text-align: center;
+}
+
+#text {
+  font-size: 1.7vw;
+  font-weight: 400;
+  margin: 0 10vw;
+  text-align: center;
+  font-weight: 100;
+}
+
+#timer-box {
+  color: #4500ff;
+  font-size: 2vw;
+  text-align: center;
+  margin: 2vw;
+  font-display: "Karla", sans-serif;;
+}
+
+#question-box {
   text-align: center;
   margin: 1vw;
-  font-size: 1.5vw;
+  color: #00ff88;
+  font-size: 2vw;
+}
+
+#choose-answer {
+  font-size: 1.7vw;
+  font-weight: 400;
+  margin: 0 10vw;
+  text-align: center;
+  font-weight: 100;
+  color: #ff4500;
+
+}
+
+#answers-box {
+  text-align: center;
+  margin: 1vw;
+  font-size: 1.7vw;
 }
 
 ul {
@@ -50,33 +92,13 @@ li {
 }
 
 li:hover {
-  background-color: #FF4500;
+  background-color: #4500ff;
 }
 
-#text{
-  font-size: 1.7vw;
-  font-weight: 400;
-  margin: 0 10vw;
+.correct:hover{
+  background-color: #00ff88;
 }
 
-#title{
-  margin-top: 2vw;
-  padding: 2vw;
-  color: #FF4500;
-  font-weight: 500;
-  font-size: 2.2vw;
-  text-align: center;
- 
-}
-
-#question-box {
-  color: #00FF88;
-  font-size: 2vw;
-}
-
-#timer-box {
-  color: #4500ff;
-  font-size: 2vw;
-  margin: 2vw;
-  font-family: 'Karla', sans-serif;
+.wrong:hover{
+  background-color: #ff4500;
 }
