@@ -1,19 +1,21 @@
 body {
-  background-image: url("image/Screenshot-2017-04-22-20.47.15.png");
-  color: whitesmoke;
+  background-image: url("image/javascript-ai.jpg");
   background-repeat: no-repeat;
+  background-size: cover; 
+  background-color: lightgray;
+  color: whitesmoke;
   font-family:  'Poppins', sans-serif;
 }
 
 #start-game {
   display: block;
-  margin: 3vw auto;
+  margin: 2vw auto;
   text-align: center;
   background-color: black;
   color: orangered;
   padding: 1.5vw 2vw;
   font-size: 2.5vw;
-  box-shadow: 0 8px 16px 0 #00ff88, 0 6px 20px 0 blue;
+  box-shadow:  0 8px 16px 0 lavender, 0 6px 20px 0 blue;
   border: none;
 }
 
@@ -23,61 +25,60 @@ body {
 }
 
 #game-container {
-  background-color: #1b2c38f0;
-  box-shadow: 0 8px 16px 0 #1e1e1e, 0 6px 20px 0 black, 0 6px 20px 0 #1b2c38;
+  background-color: #1b2c38F2;
   color: whitesmoke;
   margin: auto;
-  margin-top: 8vw;
-  width: 85vw;
-  height: 45vw;
+  margin-top: 20vw;
+  width: 90%;
+  height: 35vw;
 }
 
 #title {
   margin-top: 2vw;
   padding: 2vw;
   color: #ff4500;
-  font-weight: 500;
-  font-size: 2.2vw;
   text-align: center;
 }
 
 #text {
-  font-size: 1.7vw;
-  font-weight: 400;
   margin: 0 10vw;
   text-align: center;
-  font-weight: 100;
+  height: 5em;
 }
 
 #timer-box {
   color: #4500ff;
   font-size: 2vw;
   text-align: center;
-  margin: 2vw;
-  font-display: "Karla", sans-serif;;
+  margin-top: 2vw;
+  padding: 2vw;
+  height: 2vw;
+  font-display: 'Kameron', serif;
 }
 
 #question-box {
   text-align: center;
   margin: 1vw;
-  color: #00ff88;
-  font-size: 2vw;
+  color: #00ff45;
+  font-size: 1.5vw;
+  height: 1.6em;
+
 }
 
 #choose-answer {
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   font-weight: 400;
   margin: 0 10vw;
   text-align: center;
   font-weight: 100;
   color: #ff4500;
-
+  height: 1.5em;
 }
 
 #answers-box {
   text-align: center;
   margin: 1vw;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 ul {
@@ -96,7 +97,7 @@ li:hover {
 }
 
 .correct:hover{
-  background-color: #00ff88;
+  background-color: #00ff45;
 }
 
 .wrong:hover{
