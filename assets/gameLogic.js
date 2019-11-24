@@ -24,15 +24,13 @@ class Round {
 
     startGame() {
         if (this.timer) { this.timer.clear(); }
-        let questionBox = $('#question-box');
-        let answersBox = $('#answers-table');
-        answersBox.empty();
+        $('#answers-table').empty();
 
         if (!this.rounds) {
             $('#choose-answer').text("");
-            $('#timer-box').hide();
-            questionBox.text("The Game is over");
-            answersBox.text(`Correct answers: ${this.correctAnswers}. Wrong answers: ${this.wrongAnswers}.`);
+            $('#timer-box').text("");
+            $('#question-box').text("The Game is over!");
+            $('#answers-table').text(`Correct answers: ${this.correctAnswers}. Wrong answers: ${this.wrongAnswers}.`);
             return;
         }
         let curQuestion = getRandomElem(this.questions);
@@ -41,12 +39,12 @@ class Round {
         this.questions = this.questions.filter(other => other !== curQuestion);
         this.rounds--;
 
-        questionBox.html(`<code>${curQuestion.question}</code>`);
-        this.timer = new TimeOut(5, () => this.handleTimeOut(curQuestion));
+        $('#question-box').html(`<code>${curQuestion.question}</code>`);
+        this.timer = new TimeOut(30, () => this.handleTimeOut(curQuestion));
 
         for (let i = 0; i < curQuestion.answers.length; i++) {
             let answer = $(`<li></li>`);
-            answer.appendTo(answersBox);
+            answer.appendTo($('#answers-table'));
             answer.html(`<code>${curQuestion.answers[i]}</code>`);
             answer.click(() => {
                 this.timer.clear();
@@ -59,7 +57,7 @@ class Round {
                     this.wrongAnswers++;
                     answer.addClass('wrong');
                 }
-                setTimeout(() => this.startGame(), 2000);
+                setTimeout(() => this.startGame(), 3000);
             });
         }
     }
@@ -68,7 +66,7 @@ class Round {
         $('#choose-answer').text("");
         $('#answers-table').text(`Correct answer is: ${curQuestion.answers[curQuestion.correct]}`);
         this.wrongAnswers++;
-        setTimeout(() => this.startGame(), 1000);
+        setTimeout(() => this.startGame(), 3000);
     }
 }
 
@@ -94,13 +92,13 @@ class TimeOut {
 }
 
 window.onload = () => {
-    $('#text').html(`Find out if you're really a JS ninja and can predict its behavior. <br/> And don't forget that <code>[] + [] = ""</code>!`);
+    $('#text').html(`Find out if you're really a JS ninja and can predict its weird behavior. <br/> And don't forget that <code>[] + [] = ""</code>!`);
     $('#start-game').click(function () {
         $('#text').hide();
         $('#title').hide();
         $('#start-game').hide();
         let round = new Round();
-        setTimeout(() => round.startGame(), 1000);
+        setTimeout(() => round.startGame(), 50);
     });
 }
 
