@@ -43,10 +43,11 @@ class Round {
         this.timer = new TimeOut(30, () => this.handleTimeOut(curQuestion));
 
         for (let i = 0; i < curQuestion.answers.length; i++) {
-            let answer = $(`<li></li>`);
+            let answer = $(`<li class="answer-option"></li>`);
             answer.appendTo($('#answers-table'));
             answer.html(`<code>${curQuestion.answers[i]}</code>`);
             answer.click(() => {
+                $('.answer-option').unbind();
                 this.timer.clear();
                 if (i === curQuestion.correct) {
                     $('#choose-answer').text(getRandomElem(this.answerResponses));
