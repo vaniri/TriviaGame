@@ -103,3 +103,28 @@ li:hover {
 .wrong:hover{
   background-color: #ff4500;
 }
+
+#restart-container {
+  text-align: center;
+}
+
+#restart {
+  background-color: #f23838;
+  display: block;
+  margin: auto;
+  padding: 1vw;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  border-radius: 9% 9%;
+  margin-top: 2em;
+}
+
+#restart:hover {
+  background-color: #f23838;
+  box-shadow: inset -4em 0 0 0 rgb(0, 0, 0), inset 4em 0 0 0 rgb(0, 0, 0);
+  transition: ease-out 0.7s;
+  color: #f23838;
+  cursor: pointer;
+}

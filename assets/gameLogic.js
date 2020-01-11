@@ -31,10 +31,17 @@ class Round {
             $('#timer-box').text("");
             $('#question-box').text("The Game is over!");
             $('#answers-table').text(`Correct answers: ${this.correctAnswers}. Wrong answers: ${this.wrongAnswers}.`);
+            $("#game-container").append('<div id="restart-container"><button id="restart">Restart</button></div>')
+            $("#restart").click(() => {
+                let round = new Round();
+                round.startGame();
+                $("#restart-container").remove();
+
+            });
             return;
         }
         let curQuestion = getRandomElem(this.questions);
-        
+
         $('#choose-answer').text("Choose your answer:");
         this.questions = this.questions.filter(other => other !== curQuestion);
         this.rounds--;
